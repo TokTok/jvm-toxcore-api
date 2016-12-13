@@ -13,7 +13,7 @@ my $prefix = $data->[1];
 my $exns = $data->[2];
 
 for my $type (keys %$exns) {
-   for (keys $exns->{$type}) {
+   for (keys %{ $exns->{$type} }) {
       my @lines = @{ $exns->{$type}{$_} };
       s/^/     * / for @lines;
       $exns->{$type}{$_} = join "\n", @lines;
@@ -27,7 +27,7 @@ for my $type (keys %$exns) {
    my $codes =
       join ",\n",
       map { "    /**\n$exns->{$type}{$_}\n     */\n    $_" }
-      (sort keys $exns->{$type});
+      (sort keys %{ $exns->{$type} });
 
    my $JavaOnly =
    	$codes =~ /\@JavaOnly/

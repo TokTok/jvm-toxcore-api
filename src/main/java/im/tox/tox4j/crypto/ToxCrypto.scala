@@ -1,11 +1,11 @@
 package im.tox.tox4j.crypto
 
-import im.tox.tox4j.crypto.exceptions.{ ToxDecryptionException, ToxEncryptionException, ToxKeyDerivationException }
+import im.tox.tox4j.crypto.exceptions._
 import org.jetbrains.annotations.NotNull
 
 /**
  * To perform encryption, first derive an encryption key from a password with
- * [[ToxCrypto.deriveKeyFromPass]], and use the returned key to encrypt the data.
+ * [[ToxCrypto.passKeyDerive]], and use the returned key to encrypt the data.
  *
  * The encrypted data is prepended with a magic number, to aid validity checking
  * (no guarantees are made of course). Any data to be decrypted must start with
@@ -59,7 +59,7 @@ trait ToxCrypto {
    */
   @NotNull
   @throws[ToxKeyDerivationException]
-  def deriveKeyFromPass(@NotNull passphrase: Array[Byte]): PassKey
+  def passKeyDerive(@NotNull passphrase: Array[Byte]): PassKey
 
   /**
    * Same as above, except use the given salt for deterministic key derivation.
@@ -69,11 +69,11 @@ trait ToxCrypto {
    */
   @NotNull
   @throws[ToxKeyDerivationException]
-  def deriveKeyWithSalt(@NotNull passphrase: Array[Byte], @NotNull salt: Array[Byte]): PassKey
+  def passKeyDeriveWithSalt(@NotNull passphrase: Array[Byte], @NotNull salt: Array[Byte]): PassKey
 
   /**
    * This retrieves the salt used to encrypt the given data, which can then be passed to
-   * [[deriveKeyWithSalt]] to produce the same key as was previously used. Any encrypted
+   * [[passKeyDeriveWithSalt]] to produce the same key as was previously used. Any encrypted
    * data with this module can be used as input.
    *
    * Success does not say anything about the validity of the data, only that data of
@@ -82,12 +82,13 @@ trait ToxCrypto {
    * @return the salt, or an empty array if the magic number did not match.
    */
   @NotNull
+  @throws[ToxGetSaltException]
   def getSalt(@NotNull data: Array[Byte]): Array[Byte]
 
   /* Now come the functions that are analogous to the part 2 functions. */
 
   /**
-   * Encrypt arbitrary data with a key produced by [[deriveKeyFromPass]] or [[deriveKeyWithSalt]].
+   * Encrypt arbitrary data with a key produced by [[passKeyDerive]] or [[passKeyDeriveWithSalt]].
    *
    * The output array will be [[ToxCryptoConstants.EncryptionExtraLength]] bytes longer than
    * the input array.
@@ -102,7 +103,7 @@ trait ToxCrypto {
 
   /**
    * This is the inverse of [[encrypt]], also using only keys produced by
-   * [[deriveKeyFromPass]].
+   * [[passKeyDerive]].
    *
    * The output data has size data_length - [[ToxCryptoConstants.EncryptionExtraLength]].
    *

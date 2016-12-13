@@ -35,5 +35,12 @@
       "The encrypted byte array could not be decrypted. Either the data was",
       "corrupt or the password/key was incorrect."
     ]
+  },
+  "GetSalt": {
+    "NULL": ["The data or salt were null."],
+    "BAD_FORMAT": [
+      "The input data is missing the magic number (i.e. wasn't created by this",
+      "module, or is corrupted)"
+    ]
   }
 }]
