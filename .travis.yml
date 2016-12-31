@@ -5,3 +5,7 @@ cache:
   directories:
     - $HOME/.ivy2
     - $HOME/.sbt
+
+branches:
+  only:
+  - master
