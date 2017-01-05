@@ -36,6 +36,7 @@ import im.tox.tox4j.core.{ ToxCore, ToxCoreConstants }
 final case class ToxOptions(
     ipv6Enabled: Boolean = true,
     udpEnabled: Boolean = true,
+    localDiscoveryEnabled: Boolean = true,
     proxy: ProxyOptions = ProxyOptions.None,
     startPort: Int = ToxCoreConstants.DefaultStartPort,
     endPort: Int = ToxCoreConstants.DefaultEndPort,

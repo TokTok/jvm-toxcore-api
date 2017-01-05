@@ -20,7 +20,7 @@ To build the package itself, the following dependencies are required:
 - org.scodec:scodec-bits_2.11:1.1.2
 - org.scodec:scodec-core_2.11:1.10.3
 - org.slf4j:slf4j-api:1.7.21
-- org.toktok:tox4j-api_2.11:0.1.1
+- org.toktok:tox4j-api_2.11:0.1.2
 - org.typelevel:macro-compat_2.11:1.1.1
 
 ## Dependencies: test
