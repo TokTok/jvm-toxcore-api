@@ -1,5 +1,6 @@
 package im.tox.tox4j.core.data
 
+@SuppressWarnings(Array("org.wartremover.warts.ArrayEquals"))
 final case class ToxLosslessPacket private (value: Array[Byte]) extends AnyVal
 
 case object ToxLosslessPacket extends ToxCustomPacketCompanion[ToxLosslessPacket](

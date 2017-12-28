@@ -3,6 +3,7 @@ package im.tox.tox4j.core.data
 import im.tox.core.typesafe.{ KeyCompanion, Security }
 import im.tox.tox4j.core.ToxCoreConstants
 
+@SuppressWarnings(Array("org.wartremover.warts.ArrayEquals"))
 final case class ToxFriendAddress private (value: Array[Byte]) extends AnyVal {
   def toHexString: String = ToxFriendAddress.toHexString(this)
   override def toString: String = s"$productPrefix($toHexString)"

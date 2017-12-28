@@ -1,6 +1,7 @@
 package im.tox.core.random
 
 import java.nio.ByteBuffer
+import im.tox.core.typesafe.Equals._
 
 import org.jetbrains.annotations.NotNull
 
@@ -14,7 +15,7 @@ object RandomCore {
 
     val probabilities =
       for (frequency <- frequencies) yield {
-        if (frequency != 0) {
+        if (frequency =/= 0) {
           val probability = frequency.toDouble / data.length
           -probability * (Math.log(probability) / Math.log(-Byte.MinValue * 2))
         } else {

@@ -28,11 +28,11 @@ case object AudioLength extends DiscreteValueCompanion[Duration, AudioLength](
     { self => Attempt.successful(self.value.toMicros.toInt) }
   )
 
-  val Length2_5 = new AudioLength(values(0))
-  val Length5 = new AudioLength(values(1))
-  val Length10 = new AudioLength(values(2))
-  val Length20 = new AudioLength(values(3))
-  val Length40 = new AudioLength(values(4))
-  val Length60 = new AudioLength(values(5))
+  val Length2_5: AudioLength = new AudioLength(values(0))
+  val Length5: AudioLength = new AudioLength(values(1))
+  val Length10: AudioLength = new AudioLength(values(2))
+  val Length20: AudioLength = new AudioLength(values(3))
+  val Length40: AudioLength = new AudioLength(values(4))
+  val Length60: AudioLength = new AudioLength(values(5))
 
 }

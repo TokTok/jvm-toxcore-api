@@ -7,7 +7,7 @@ import scodec.{ Attempt, Err }
 import scalaz.{ -\/, \/, \/- }
 
 sealed abstract class CoreError {
-  val exception = new CoreException(this)
+  val exception: CoreException = new CoreException(this)
 }
 
 object CoreError {
@@ -22,14 +22,14 @@ object CoreError {
 
   def apply[A](option: Option[A], message: String): CoreError \/ A = {
     option match {
-      case None => -\/(ValidationError(message))
+      case None        => -\/(ValidationError(message))
       case Some(value) => \/-(value)
     }
   }
 
   def apply[A](attempt: Attempt[A]): CoreError \/ A = {
     attempt match {
-      case Attempt.Failure(cause) => -\/(CodecError(cause))
+      case Attempt.Failure(cause)    => -\/(CodecError(cause))
       case Attempt.Successful(value) => \/-(value)
     }
   }
@@ -37,7 +37,7 @@ object CoreError {
   def toAttempt[A](value: CoreError \/ A): Attempt[A] = {
     Attempt.fromEither(value.leftMap {
       case CodecError(cause) => cause
-      case error => new General(error.toString)
+      case error             => new General(error.toString)
     }.toEither)
   }
 
