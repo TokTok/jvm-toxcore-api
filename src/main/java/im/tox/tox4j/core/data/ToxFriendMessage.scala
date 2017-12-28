@@ -4,6 +4,7 @@ import im.tox.core.error.CoreError
 import im.tox.core.typesafe.VariableSizeByteArrayCompanion
 import im.tox.tox4j.core.ToxCoreConstants
 
+@SuppressWarnings(Array("org.wartremover.warts.ArrayEquals"))
 final case class ToxFriendMessage private (value: Array[Byte]) extends AnyVal {
   override def toString: String = new String(value)
 }

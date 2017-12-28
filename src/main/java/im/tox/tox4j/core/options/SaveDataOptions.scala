@@ -36,6 +36,7 @@ object SaveDataOptions {
    * Full save data containing friend list, last seen DHT nodes, name, and all other information
    * contained within a Tox instance.
    */
+  @SuppressWarnings(Array("org.wartremover.warts.ArrayEquals"))
   final case class ToxSave(data: Array[Byte]) extends SaveDataOptions {
     override def kind: ToxSavedataType = ToxSavedataType.TOX_SAVE
   }

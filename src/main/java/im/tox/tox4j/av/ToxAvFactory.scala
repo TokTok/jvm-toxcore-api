@@ -14,6 +14,7 @@ abstract class ToxAvFactory {
     }
   }
 
+  @SuppressWarnings(Array("org.wartremover.warts.Recursion"))
   def withToxAvN[R](
     toxes: List[ToxCore],
     initial: List[(ToxCore, ToxAv)] = Nil

@@ -2,6 +2,7 @@ package im.tox.tox4j.core
 
 import im.tox.tox4j.crypto.ToxCryptoConstants
 
+@SuppressWarnings(Array("org.wartremover.warts.PublicInference"))
 object ToxCoreConstants {
 
   /**

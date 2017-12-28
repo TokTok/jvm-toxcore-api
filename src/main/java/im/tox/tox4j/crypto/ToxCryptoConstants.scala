@@ -1,5 +1,6 @@
 package im.tox.tox4j.crypto
 
+@SuppressWarnings(Array("org.wartremover.warts.PublicInference"))
 object ToxCryptoConstants {
 
   /**
