@@ -7,7 +7,7 @@ The API part of the tox4j implementation. Implemented in jvm-toxcore-c.
 To build the package itself, the following dependencies are required:
 
 - com.chuusai:shapeless_2.11:2.3.2
-- com.google.protobuf:protobuf-java:3.1.0
+- com.google.protobuf:protobuf-java:3.5.0
 - com.intellij:annotations:12.0
 - com.lihaoyi:fastparse-utils_2.11:0.3.7
 - com.lihaoyi:fastparse_2.11:0.3.7
