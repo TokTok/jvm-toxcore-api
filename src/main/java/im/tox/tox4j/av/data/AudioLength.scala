@@ -2,8 +2,6 @@ package im.tox.tox4j.av.data
 
 import im.tox.core.error.CoreError
 import im.tox.core.typesafe.DiscreteValueCompanion
-import scodec.Attempt
-import scodec.codecs._
 
 import scala.concurrent.duration._
 import scala.language.postfixOps
@@ -22,11 +20,6 @@ case object AudioLength extends DiscreteValueCompanion[Duration, AudioLength](
 ) {
 
   protected override def unsafeFromValue(value: Duration): AudioLength = new AudioLength(value)
-
-  override val codec = uint16.exmap[AudioLength](
-    { micros => CoreError.toAttempt(fromValue(micros microseconds)) },
-    { self => Attempt.successful(self.value.toMicros.toInt) }
-  )
 
   val Length2_5: AudioLength = new AudioLength(values(0))
   val Length5: AudioLength = new AudioLength(values(1))

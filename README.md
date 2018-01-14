@@ -6,7 +6,6 @@ The API part of the tox4j implementation. Implemented in jvm-toxcore-c.
 
 To build the package itself, the following dependencies are required:
 
-- com.chuusai:shapeless_2.11:2.3.2
 - com.google.protobuf:protobuf-java:3.5.0
 - com.intellij:annotations:12.0
 - com.lihaoyi:fastparse-utils_2.11:0.3.7
@@ -18,11 +17,8 @@ To build the package itself, the following dependencies are required:
 - org.scala-lang.modules:scala-java8-compat_2.11:0.7.0
 - org.scala-lang:scala-reflect:2.11.12
 - org.scalaz:scalaz-core_2.11:7.3.0-M18
-- org.scodec:scodec-bits_2.11:1.1.2
-- org.scodec:scodec-core_2.11:1.10.3
 - org.slf4j:slf4j-api:1.7.25
 - org.toktok:tox4j-api_2.11:0.1.3
-- org.typelevel:macro-compat_2.11:1.1.1
 
 ## Dependencies: test
 

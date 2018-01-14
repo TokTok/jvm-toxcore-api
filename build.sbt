@@ -9,8 +9,7 @@ bintrayVcsUrl := Some("https://github.com/TokTok/jvm-toxcore-api")
 libraryDependencies ++= Seq(
   "com.intellij" % "annotations" % "12.0",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2",
-  "org.scalaz" %% "scalaz-core" % "7.3.0-M18",
-  "org.scodec" %% "scodec-core" % "1.10.3"
+  "org.scalaz" %% "scalaz-core" % "7.3.0-M18"
 )
 
 // Test dependencies.
