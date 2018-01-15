@@ -3,8 +3,6 @@ package im.tox.core.typesafe
 import im.tox.core.ModuleCompanion
 import im.tox.core.error.CoreError
 
-import scalaz.\/
-
 abstract class WrappedValueCompanion[Repr, T <: AnyVal, S <: Security](
     toValue: T => Repr
 ) extends ModuleCompanion[T, S] {

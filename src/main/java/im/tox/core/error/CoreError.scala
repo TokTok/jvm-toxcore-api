@@ -2,7 +2,7 @@ package im.tox.core.error
 
 import im.tox.core.error.CoreError.CoreException
 
-import scalaz.{ -\/, \/, \/- }
+import im.tox.core.typesafe.{ -\/, \/, \/- }
 
 sealed abstract class CoreError {
   val exception: CoreException = new CoreException(this)

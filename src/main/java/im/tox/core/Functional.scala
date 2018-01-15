@@ -1,7 +1,7 @@
 package im.tox.core
 
 import scala.collection.GenTraversableOnce
-import scalaz.{ -\/, \/, \/- }
+import im.tox.core.typesafe.{ -\/, \/, \/- }
 
 /**
  * A number of utilities for functional programming.

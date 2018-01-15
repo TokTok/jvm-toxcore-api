@@ -5,8 +5,6 @@ import java.nio.charset.Charset
 import im.tox.core.Functional._
 import im.tox.core.error.CoreError
 
-import scalaz.{ -\/, \/-, \/ }
-
 abstract class ByteArrayCompanion[T <: AnyVal, S <: Security](
     toValue: T => Array[Byte]
 ) extends WrappedValueCompanion[Array[Byte], T, S](toValue) {
@@ -84,7 +82,7 @@ abstract class ByteArrayCompanion[T <: AnyVal, S <: Security](
 
   private def fromHexDigit(id: String, position: Int): CoreError \/ Byte = {
     val c = id.charAt(position)
-    val digit =
+    val digit: \/[CoreError, Int] =
       if (false) { \/-(0) }
       else if ('0' to '9' contains c) { \/-(c - '0') }
       else if ('A' to 'F' contains c) { \/-(c - 'A' + 10) }

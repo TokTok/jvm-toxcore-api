@@ -2,9 +2,8 @@ package im.tox.tox4j.core.data
 
 import im.tox.core.error.CoreError
 import im.tox.core.typesafe.VariableSizeByteArrayCompanion
+import im.tox.core.typesafe.\/
 import im.tox.tox4j.core.ToxCoreConstants
-
-import scalaz.\/
 
 abstract class ToxCustomPacketCompanion[T <: AnyVal](
     val MinPacketId: Int,
