@@ -28,4 +28,8 @@ case object AudioLength extends DiscreteValueCompanion[Duration, AudioLength](
   val Length40: AudioLength = new AudioLength(values(4))
   val Length60: AudioLength = new AudioLength(values(5))
 
+  final override def equals(a: AudioLength, b: AudioLength): Boolean = {
+    a.value == b.value
+  }
+
 }

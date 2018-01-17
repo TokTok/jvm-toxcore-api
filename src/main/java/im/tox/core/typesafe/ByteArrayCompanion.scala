@@ -11,6 +11,10 @@ abstract class ByteArrayCompanion[T <: AnyVal, S <: Security](
 
   private val UTF_8 = Charset.forName("UTF-8")
 
+  final override def equals(a: T, b: T): Boolean = {
+    toValue(a) sameElements toValue(b)
+  }
+
   final def fromString(value: String): CoreError \/ T = {
     fromValue(value.getBytes(UTF_8))
   }

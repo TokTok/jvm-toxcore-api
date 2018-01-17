@@ -8,6 +8,7 @@ import im.tox.core.typesafe.\/
 @SuppressWarnings(Array("org.wartremover.warts.Equals"))
 abstract class ModuleCompanion[T, +S <: Security] {
 
+  def equals(a: T, b: T): Boolean
   def nullable: Boolean = false
 
 }

@@ -6,19 +6,8 @@ The API part of the tox4j implementation. Implemented in jvm-toxcore-c.
 
 To build the package itself, the following dependencies are required:
 
-- com.google.protobuf:protobuf-java:3.5.0
 - com.intellij:annotations:12.0
-- com.lihaoyi:fastparse-utils_2.11:0.3.7
-- com.lihaoyi:fastparse_2.11:0.3.7
-- com.lihaoyi:sourcecode_2.11:0.1.1
-- com.trueaccord.lenses:lenses_2.11:0.4.7
-- com.trueaccord.scalapb:scalapb-runtime_2.11:0.5.43
-- com.typesafe.scala-logging:scala-logging_2.11:3.7.2
-- org.scala-lang.modules:scala-java8-compat_2.11:0.7.0
-- org.scala-lang:scala-reflect:2.11.12
-- org.scalaz:scalaz-core_2.11:7.3.0-M18
-- org.slf4j:slf4j-api:1.7.25
-- org.toktok:tox4j-api_2.11:0.1.3
+- org.toktok:tox4j-api_2.11:0.1.4
 
 ## Dependencies: test
 
@@ -26,5 +15,6 @@ For testing, the following additional dependencies are required:
 
 - org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4
 - org.scala-lang.modules:scala-xml_2.11:1.0.5
+- org.scala-lang:scala-reflect:2.11.12
 - org.scalactic:scalactic_2.11:3.2.0-SNAP7
 - org.scalatest:scalatest_2.11:3.2.0-SNAP7
