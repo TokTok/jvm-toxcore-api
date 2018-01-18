@@ -16,5 +16,7 @@ For testing, the following additional dependencies are required:
 - org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4
 - org.scala-lang.modules:scala-xml_2.11:1.0.5
 - org.scala-lang:scala-reflect:2.11.12
-- org.scalactic:scalactic_2.11:3.2.0-SNAP7
-- org.scalatest:scalatest_2.11:3.2.0-SNAP7
+- org.scala-sbt:test-interface:1.0
+- org.scalacheck:scalacheck_2.11:1.13.5
+- org.scalactic:scalactic_2.11:3.0.1
+- org.scalatest:scalatest_2.11:3.0.1
