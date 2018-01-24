@@ -15,13 +15,9 @@ public final class ToxavBitRateSetException extends ToxException<ToxavBitRateSet
      */
     FRIEND_NOT_IN_CALL,
     /**
-     * The audio bit rate passed was not one of the supported values.
+     * The bit rate passed was not one of the supported values.
      */
-    INVALID_AUDIO_BIT_RATE,
-    /**
-     * The video bit rate passed was not one of the supported values.
-     */
-    INVALID_VIDEO_BIT_RATE,
+    INVALID_BIT_RATE,
     /**
      * Synchronization error occurred.
      */
