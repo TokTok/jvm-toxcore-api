@@ -98,16 +98,24 @@ trait ToxAv extends Closeable with ToxAvEventSynth {
   def callControl(friendNumber: ToxFriendNumber, @NotNull control: ToxavCallControl): Unit
 
   /**
-   * Set the audio and video bit rate to be used in subsequent audio frames.
+   * Set the audio bit rate to be used in subsequent audio frames.
    *
    * @param friendNumber The friend number of the friend for which to set the audio bit rate.
    * @param audioBitRate The new audio bit rate in Kb/sec. Set to 0 to disable audio sending.
    *                     Pass -1 to leave unchanged.
+   */
+  @throws[ToxavBitRateSetException]
+  def setBitRateAudio(friendNumber: ToxFriendNumber, audioBitRate: BitRate): Unit
+
+  /**
+   * Set the video bit rate to be used in subsequent audio frames.
+   *
+   * @param friendNumber The friend number of the friend for which to set the audio bit rate.
    * @param videoBitRate The new video bit rate in Kb/sec. Set to 0 to disable video sending.
    *                     Pass -1 to leave unchanged.
    */
   @throws[ToxavBitRateSetException]
-  def setBitRate(friendNumber: ToxFriendNumber, audioBitRate: BitRate, videoBitRate: BitRate): Unit
+  def setBitRateVideo(friendNumber: ToxFriendNumber, videoBitRate: BitRate): Unit
 
   /**
    * Send an audio frame to a friend.

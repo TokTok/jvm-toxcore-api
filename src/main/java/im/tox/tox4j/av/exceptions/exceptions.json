@@ -40,8 +40,7 @@
   },
   "BitRateSet": {
     "SYNC": ["Synchronization error occurred."],
-    "INVALID_AUDIO_BIT_RATE": ["The audio bit rate passed was not one of the supported values."],
-    "INVALID_VIDEO_BIT_RATE": ["The video bit rate passed was not one of the supported values."],
+    "INVALID_BIT_RATE": ["The bit rate passed was not one of the supported values."],
     "FRIEND_NOT_FOUND": ["The friend_number passed did not designate a valid friend."],
     "FRIEND_NOT_IN_CALL": ["This client is currently not in a call with the friend."]
   },
