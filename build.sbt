@@ -1,6 +1,6 @@
 organization  := "org.toktok"
 name          := "tox4j-api"
-version       := "0.1.6"
+version       := "0.1.7"
 scalaVersion  := "2.11.12"
 
 bintrayVcsUrl := Some("https://github.com/TokTok/jvm-toxcore-api")
