@@ -25,6 +25,5 @@ scala_test(
         ":jvm-toxcore-api",
         "@org_scalacheck_scalacheck//jar",
         "@org_scalactic_scalactic//jar:file",
-        "@org_scalatest_scalatest//jar:file",
     ],
 )
