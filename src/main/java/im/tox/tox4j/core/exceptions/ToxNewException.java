@@ -51,6 +51,12 @@ public final class ToxNewException extends ToxException<ToxNewException.Code> {
      * The proxy address passed could not be resolved.
      */
     PROXY_NOT_FOUND,
+    /**
+     * UDP was enabled together with a proxy. This is a security issue, because
+     * UDP connections are never proxied. You must disable UDP in order to use a
+     * proxy.
+     */
+    PROXY_WITH_UDP,
   }
 
   public ToxNewException(@NotNull Code code) {
