@@ -1,3 +1,4 @@
+---
 language: scala
 scala: 2.11.12
 
@@ -5,7 +6,3 @@ cache:
   directories:
     - $HOME/.ivy2
     - $HOME/.sbt
-
-branches:
-  only:
-  - master
