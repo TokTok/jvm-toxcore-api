@@ -1,6 +1,6 @@
 organization  := "org.toktok"
 name          := "tox4j-api"
-version       := "0.2.0"
+version       := "0.2.1"
 scalaVersion  := "2.11.12"
 
 bintrayVcsUrl := Some("https://github.com/TokTok/jvm-toxcore-api")
@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
 
 // Test dependencies.
 libraryDependencies ++= Seq(
-  "org.scalacheck" %% "scalacheck" % "1.13.5",
+  "org.scalacheck" %% "scalacheck" % "1.14.1",
   "org.scalatest" %% "scalatest" % "3.0.1"
 ) map (_ % Test)
 
