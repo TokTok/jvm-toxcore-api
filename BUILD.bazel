@@ -10,17 +10,12 @@ scala_library(
         "src/main/java/**/*.scala",
     ]),
     visibility = ["//visibility:public"],
-    deps = [
-        "@com_intellij_annotations//jar",
-    ],
+    deps = ["@com_intellij_annotations//jar"],
 )
 
 scala_test(
     name = "jvm-toxcore-api-test",
-    srcs = glob([
-        "src/test/java/**/*.java",
-        "src/test/java/**/*.scala",
-    ]),
+    srcs = glob(["src/test/java/**/*.scala"]),
     deps = [
         ":jvm-toxcore-api",
         "@org_scalacheck_scalacheck//jar",
