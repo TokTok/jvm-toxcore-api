@@ -7,7 +7,7 @@ bintrayVcsUrl := Some("https://github.com/TokTok/jvm-toxcore-api")
 
 // Build dependencies.
 libraryDependencies ++= Seq(
-  "com.intellij" % "annotations" % "12.0"
+  "org.jetbrains" % "annotations" % "13.0"
 )
 
 // Test dependencies.

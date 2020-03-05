@@ -6,7 +6,7 @@ The API part of the tox4j implementation. Implemented in jvm-toxcore-c.
 
 To build the package itself, the following dependencies are required:
 
-- com.intellij:annotations:12.0
+- org.jetbrains:annotations:13.0
 - org.toktok:tox4j-api_2.11:0.1.4
 
 ## Dependencies: test
