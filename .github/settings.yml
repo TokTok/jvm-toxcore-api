@@ -1,0 +1,19 @@
+---
+_extends: template
+
+repository:
+  name: jvm-toxcore-api
+  description: The base Tox4j API without any implementation
+  topics: tox, java, scala
+  has_issues: true
+
+branches:
+  - name: "master"
+    protection:
+      required_status_checks:
+        contexts:
+          - Codacy/PR Quality Review
+          - Travis CI - Pull Request
+          - WIP
+          - code-review/reviewable
+          - license/cla
