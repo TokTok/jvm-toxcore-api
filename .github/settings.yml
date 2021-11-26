@@ -1,5 +1,5 @@
 ---
-_extends: template
+_extends: .github
 
 repository:
   name: jvm-toxcore-api
@@ -12,8 +12,6 @@ branches:
     protection:
       required_status_checks:
         contexts:
-          - Codacy/PR Quality Review
-          - Travis CI - Pull Request
-          - WIP
+          - cirrus-ci
+          - Codacy Static Code Analysis
           - code-review/reviewable
-          - license/cla
