@@ -20,5 +20,6 @@ scala_test(
     deps = [
         ":jvm-toxcore-api",
         "@maven//:org_scalacheck_scalacheck_2_11",
+        "@maven//:org_scalatestplus_scalacheck_1_14_2_11",
     ],
 )
