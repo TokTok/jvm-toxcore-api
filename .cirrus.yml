@@ -9,5 +9,4 @@ cirrus-ci_task:
   test_all_script:
     - cd /src/workspace && bazel test -k
         --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST
-        --config=release
         //jvm-toxcore-api/...
