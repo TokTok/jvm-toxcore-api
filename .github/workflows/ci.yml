@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  sbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up jvm-sbt-plugins
+        run: git clone https://github.com/TokTok/$REPO.git && cd $REPO && sbt publishLocal
+        env:
+          REPO: jvm-sbt-plugins
+      - name: Build and test
+        run: sbt -v +test
